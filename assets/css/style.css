@@ -95,6 +95,31 @@ nav a:hover {
     font-size:26px;
     font-weight:700;
 }
+.nav-links{
+    list-style:none;
+    display:flex;
+    gap:25px;
+    align-items:center;
+}
+
+.nav-links li{
+    list-style:none;
+}
+
+.nav-links a{
+    color:#334155;
+    font-weight:500;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:#2563EB;
+}
+
+.nav-links .active{
+    color:#2563EB;
+    font-weight:700;
+}
 
 nav{
     display:flex;
@@ -191,11 +216,14 @@ nav a:hover{
 }
 
 .card{
+    display:block;
     background:white;
     padding:30px;
     border-radius:15px;
     box-shadow:0 5px 15px rgba(0,0,0,.08);
     transition:.3s;
+    text-decoration:none;
+    color:inherit;
 }
 
 .card:hover{
