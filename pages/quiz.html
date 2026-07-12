@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz | Kayy Reviser</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body>
+
+<header>
+
+    <nav class="navbar">
+
+        <div class="logo">
+            <a href="../index.html">📚 Kayy Reviser</a>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="../index.html">Accueil</a></li>
+            <li><a href="mathematiques.html">Mathématiques</a></li>
+            <li><a href="physique-chimie.html">Physique-Chimie</a></li>
+            <li><a href="svt.html">SVT</a></li>
+            <li><a href="philosophie.html">Philosophie</a></li>
+            <li><a href="francais.html">Français</a></li>
+            <li><a href="anglais.html">Anglais</a></li>
+            <li><a href="quiz.html" class="active">Quiz</a></li>
+            <li><a href="#">Bac</a></li>
+        </ul>
+
+    </nav>
+
+</header>
+
+<section class="hero">
+
+    <h1>🎯 Quiz Kayy Reviser</h1>
+
+    <p>
+        Teste tes connaissances et mesure ta progression.
+    </p>
+
+</section>
+
+<section class="chapters">
+
+    <h2>📝 Choisis une matière</h2>
+
+    <div class="subjects-grid">
+
+        <a href="#" class="card" data-subject="math">
+            <h3>📐 Mathématiques</h3>
+            <p>20 questions</p>
+        </a>
+
+        <a href="#" class="card" data-subject="pc">
+            <h3>⚛️ Physique-Chimie</h3>
+            <p>20 questions</p>
+        </a>
+
+        <a href="#" class="card" data-subject="svt">
+            <h3>🧬 SVT</h3>
+            <p>20 questions</p>
+        </a>
+
+        <a href="#" class="card" data-subject="philo">
+            <h3>📖 Philosophie</h3>
+            <p>20 questions</p>
+        </a>
+
+        <a href="#" class="card" data-subject="fr">
+            <h3>🇫🇷 Français</h3>
+            <p>20 questions</p>
+        </a>
+
+        <a href="#" class="card" data-subject="en">
+            <h3>🇬🇧 Anglais</h3>
+            <p>20 questions</p>
+        </a>
+
+    </div>
+
+</section>
+
+<section id="quiz-container" style="display:none;">
+    <p id="progress"></p>
+    <div class="progress-bar">
+    <div id="progress-fill"></div>
+</div>
+
+    <h2 id="question"></h2>
+
+    <div id="answers"></div>
+
+    <button id="next-btn" class="btn-primary">
+        Question suivante
+    </button>
+    <button id="restart-btn" class="btn-secondary" style="display:none;">
+    🔄 Recommencer
+</button>
+
+</section>
+
+<footer class="footer">
+
+    <h3>Kayy Reviser</h3>
+
+    <p>La plateforme sénégalaise de révision pour réussir le Bac.</p>
+
+    <p class="copyright">
+        © 2026 Kayy Reviser - Tous droits réservés.
+    </p>
+
+</footer>
+
+<button id="backToTop" class="back-to-top">↑</button>
+
+<script src="../assets/js/script.js"></script>
+
+</body>
+
+</html>
