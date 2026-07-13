@@ -98,7 +98,9 @@ cards.forEach(card => {
 
         }
 
-        currentQuiz = quizData[subject];
+        currentQuiz = [...quizData[subject]];
+
+currentQuiz.sort(() => Math.random() - 0.5);
 
         currentQuestion = 0;
 
@@ -203,30 +205,41 @@ nextBtn.addEventListener("click", () => {
 
         progress.textContent = "";
 
+        progressFill.style.width = "100%";
+
+        const percentage = Math.round((score / currentQuiz.length) * 100);
+
         let message = "";
 
-        if (score === currentQuiz.length) {
+        if (percentage >= 90) {
 
-            message = "🏆 Excellent !";
+            message = "🏆 Excellent ! Tu es prêt pour le Bac.";
 
-        } else if (score >= currentQuiz.length / 2) {
+        } else if (percentage >= 70) {
 
-            message = "👏 Bon travail !";
+            message = "👏 Très bon travail ! Continue comme ça.";
+
+        } else if (percentage >= 50) {
+
+            message = "🙂 Bon début. Quelques révisions supplémentaires feront la différence.";
 
         } else {
 
-            message = "📚 Continue tes révisions.";
+            message = "📚 Courage ! Revois le cours puis réessaie le quiz.";
 
         }
 
-        question.textContent =
-            `${message} Score : ${score}/${currentQuiz.length}`;
+        question.innerHTML = `
+            <h2>${message}</h2>
+            <p><strong>Score :</strong> ${score}/${currentQuiz.length}</p>
+            <p><strong>Pourcentage :</strong> ${percentage}%</p>
+        `;
 
         answers.innerHTML = "";
-        progressFill.style.width = "100%";
+
+        nextBtn.style.display = "none";
 
         restartBtn.style.display = "inline-block";
-
     }
 
 });
